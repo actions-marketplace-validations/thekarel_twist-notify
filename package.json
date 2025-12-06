@@ -1,6 +1,6 @@
 {
   "name": "twist-notify",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "Send updates from your workflows to a Twist channel",
   "main": "index.js",
   "scripts": {},
