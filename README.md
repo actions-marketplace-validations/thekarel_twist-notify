@@ -77,3 +77,15 @@ You can post markdown messages:
 ```yaml
 message: 👍 Deployed ${{ inputs.workload }} to ${{ inputs.stage }} [🔗](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
 ```
+
+
+# Release process
+
+Add a new tag:
+
+```sh
+git tag 1.0.999
+git push origin 1.0.999
+```
+
+Go to https://github.com/thekarel/twist-notify/releases/new and create a release for the new tag.

@@ -1,5 +1,4 @@
 const core = require('@actions/core');
-const axios = require('axios')
 
 async function run() {
   try {
@@ -8,9 +7,15 @@ async function run() {
     const topic = core.getInput('topic');
     const message = core.getInput('message');
 
-    const response = await axios.post(url, {
-      title: topic,
-      content: message
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        title: topic,
+        content: message
+      })
     });
 
     console.log(`Response status: ${response.status}`);
